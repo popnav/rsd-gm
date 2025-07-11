@@ -115,7 +115,7 @@ export default {
                 bestiary: {
                     fields: ['and', 'ability', 'alignment', 'amphibious', 'aquatic', 'caster', 'description', 'immunity', 'item', 'level', 'name', 'rarity', 'resistance', 'size', 'source', 'spell', 'trait', 'type', 'weakness'],
                     ability: ['ability:"*claws*"','ability:"*scent*"','ability:"*curse*"','ability:"*vision*"','ability:"*spells*"'],
-                    alignment: ['alignment:ng', 'alignment:[ng,n,ce,le,cg,lg,ln,ne,cn]'],
+                    alignment: ['alignment:lawful', 'alignment:neutral', 'alignment:chaotic', 'alignment:good', 'alignment:evil', 'alignment:holy', 'alignment:unholy'],
                     amphibious: ['amphibious:true','amphibious:false'],
                     aquatic: ['aquatic:true','aquatic:false'],
                     caster: ['caster:true', 'caster:false'],
@@ -131,7 +131,7 @@ export default {
                     spell: ['spell:"produce flame"','spell:"*magic*"'],
                     trait: ['trait:animal','trait:[swarm,mindless,undead,golem,grioth]'],
                     type: ['type:humanoid','type:[construct,elemental,abberation,animal]','type:[monitor,plant,fiend,celestial],','type:[spirit,beast,ooze,giant]','type:[undead,fungus,fey,astral]','type:[dream,time,positive,petitioner]','type:[negative,ethereal,mindless,leshy]','type:[earth,npc,hazard]'],
-                    weakness: ['weakness:"coldiron"', 'weakness:"evil"', 'weakness:"*cold*"'],
+                    weakness: ['weakness:"cold-iron"', 'weakness:"evil"', 'weakness:"*cold*"'],
                 },
             },
 
@@ -331,7 +331,7 @@ export default {
             if (!!filteredCommands && filteredCommands.length > 0) {
 
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'ability', ['ab'], {isTextArray: true})
-                bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'alignment', ['alignment'], {isExact: true})
+                bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'alignment', ['traits'], {isExact: true})
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'amphibious', ['am'], {isBoolean: true})
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'aquatic', ['aq'], {isBoolean: true})
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'caster', ['cs'], {isBoolean: true})
@@ -348,7 +348,7 @@ export default {
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'source', ['source'], {isText: true})
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'spell', ['sp'], {isTextArray: true})
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'trait', ['traits'])
-                bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'type', ['type'])
+                bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'type', ['traits'])
                 bestiaryFilter = this.doFilterCommand(filteredCommands, bestiaryFilter, 'weakness', ['wk'], {isTextArray: true})
 
                 if (!!bestiaryFilter && allBestiaryCount ==  Number(bestiaryFilter.length) && !this.details) {

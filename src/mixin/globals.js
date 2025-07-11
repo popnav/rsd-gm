@@ -169,7 +169,7 @@ export default {
                         if (!member.name && !!member.bid) {
                             originalArray[key].name = this.$rsd.bestiary.getName(member.bid)
                         }
-                        originalArray[key].identifier = (member.adj == 'weak' || member.adj == 'elite' ? this.$rsd.format.capitalize(member.adj) + ' ' : '') + this.$rsd.bestiary.getType(member.bid)
+                        originalArray[key].identifier = (member.adj == 'weak' || member.adj == 'elite' ? this.$rsd.format.capitalize(member.adj) + ' ' : '') + this.$rsd.bestiary.getCreatureType(member.bid)
                     })
                 }
 
