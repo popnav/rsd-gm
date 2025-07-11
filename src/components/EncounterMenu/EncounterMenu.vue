@@ -115,7 +115,7 @@ export default {
                     spell: ['spell:"produce flame"','spell:"*magic*"'],
                     trait: ['trait:animal','trait:[swarm,mindless,undead,golem,grioth]'],
                     type: ['type:humanoid','type:[construct,elemental,abberation,animal]','type:[monitor,plant,fiend,celestial],','type:[spirit,beast,ooze,giant]','type:[undead,fungus,fey,astral]','type:[dream,time,positive,petitioner]','type:[negative,ethereal,mindless,leshy]','type:[earth,npc,hazard]'],
-                    weakness: ['weakness:"coldiron"', 'weakness:"evil"', 'weakness:"*cold*"'],
+                    weakness: ['weakness:"cold-iron"', 'weakness:"evil"', 'weakness:"*cold*"'],
                 },
             },
 
