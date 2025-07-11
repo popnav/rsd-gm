@@ -454,7 +454,7 @@
                                         <v-fade-transition>
                                             <span v-show="!!$rsd.bestiary.getName(member.bid)">
                                                 <span v-show="member.adj == 'weak' || member.adj == 'elite'">{{member.adj}} </span>
-                                                {{member.type == 'npc' ? $rsd.bestiary.getType(member.bid) : member.type}}
+                                                {{member.type == 'npc' ? $rsd.bestiary.getCreatureType(member.bid) : member.type}}
                                             </span>
                                         </v-fade-transition>
                                     </v-list-item-subtitle>

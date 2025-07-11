@@ -14,7 +14,10 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
-.idea
+*.iml
+*.ipr
+*.iws
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
